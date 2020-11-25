@@ -1,41 +1,14 @@
-# TypeScript Next.js example
+# Todo nextjs application
+This app is made using nextjs typescript
 
-This is a really simple project that shows the usage of Next.js with TypeScript.
+it uses todo-api which also created using typescript: https://github.com/BudiartoSalim/todo-api
 
-## Deploy your own
+register will automatically logs you in if it is successful, password is hashed but feel free to just register dummy data.
 
-Deploy the example using [Vercel](https://vercel.com):
+email MUST BE an email format.
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/import/project?template=https://github.com/vercel/next.js/tree/canary/examples/with-typescript)
-
-## How to use it?
-
-Execute [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) with [npm](https://docs.npmjs.com/cli/init) or [Yarn](https://yarnpkg.com/lang/en/docs/cli/create/) to bootstrap the example:
-
-```bash
-npx create-next-app --example with-typescript with-typescript-app
-# or
-yarn create next-app --example with-typescript with-typescript-app
-```
-
-Deploy it to the cloud with [Vercel](https://vercel.com/import?filter=next.js&utm_source=github&utm_medium=readme&utm_campaign=next-example) ([Documentation](https://nextjs.org/docs/deployment)).
-
-## Notes
-
-This example shows how to integrate the TypeScript type system into Next.js. Since TypeScript is supported out of the box with Next.js, all we have to do is to install TypeScript.
-
-```
-npm install --save-dev typescript
-```
-
-To enable TypeScript's features, we install the type declarations for React and Node.
-
-```
-npm install --save-dev @types/react @types/react-dom @types/node
-```
-
-When we run `next dev` the next time, Next.js will start looking for any `.ts` or `.tsx` files in our project and builds it. It even automatically creates a `tsconfig.json` file for our project with the recommended settings.
-
-Next.js has built-in TypeScript declarations, so we'll get autocompletion for Next.js' modules straight away.
-
-A `type-check` script is also added to `package.json`, which runs TypeScript's `tsc` CLI in `noEmit` mode to run type-checking separately. You can then include this, for example, in your `test` scripts.
+# Features
+- Simple CRUD where each person can create, update the status, and delete their own todos
+- Tracks each person's todo separately; if you're logged in as A, you can't see B's todos
+- Todos have 3 different status: Started, In progress, Finished
+- Change todo status with simple button click, button only appear if it is valid (no "progress" button on finished todo, for example)
